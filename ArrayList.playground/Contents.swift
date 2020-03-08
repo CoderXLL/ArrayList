@@ -94,14 +94,17 @@ public class ArrayList {
         return str
     }
     
+    /// 清除所有元素
     public func clear() {
         size = 0
     }
     
+    /// 元素的数量
     public func length() -> Int {
         return size
     }
     
+    /// 是否为空
     public func isEmpty() -> Bool {
         size == 0
     }
@@ -110,10 +113,17 @@ public class ArrayList {
         return indexOf(element) != ELEMENT_NOT_FOUND
     }
     
+    
+    /// 添加元素到尾部
+    /// - Parameter element: element
     public func add(_ element: Int) {
         insert(size, element)
     }
     
+    /// index位置插入一个元素
+    /// - Parameters:
+    ///   - index: index
+    ///   - element: element
     public func insert(_ index: Int, _ element: Int) {
         rangeCheckForAdd(index: index)
         for i in size-1...index {
@@ -175,5 +185,6 @@ list.insert(0, 100)
 print("\(list.toString())")
 list.set(1, 90)
 assert(list.getElementOf(1) == 90, "测试未通过")
+
 
 
