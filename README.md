@@ -1,0 +1,2 @@
+# ArrayList
+由Swift语言重写了JAVA系统实现的可动态扩展的ArrayList
